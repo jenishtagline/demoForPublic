@@ -23,9 +23,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     }}
     return t;
 };
-exports.__esModule = true;
-// const _ = LodashGS.load();
-// var _ = require('lodash');
+
 function generateClientTabFormula(clientName) {
     return '\n  getClientAirchecks(\n  QUERY(Airchecks!A:AX,"select * where F = \'' + clientName + '\' and AM = TRUE order by D", 1),\n  QUERY(\'Radio Airchecks\'!A:AD,"select * where C = \'' + clientName + '\' and V = TRUE order by B", 1),\n  QUERY(\'Special Drop Off Request\'!A:AM,"select * where A = \'' + clientName + '\' order by C", 1)\n)';
 }
