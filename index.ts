@@ -1,6 +1,6 @@
 const _ = LodashGS.load();
 // import * as _ from 'lodash';
-function generateClientTabFormula(clientName: string) {
+function generateClientTabFormula(clientName) {
     return `
   getClientAirchecks(
   QUERY(Airchecks!A:AX,"select * where F = '${clientName}' and AM = TRUE order by D", 1),
@@ -10,7 +10,7 @@ function generateClientTabFormula(clientName: string) {
 };
 
 function generateClientTabs() {
-    const ss: any = SpreadsheetApp.getActiveSpreadsheet();
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
     const sheet = ss.getSheetByName('Airchecks');
     const last = sheet.getLastRow();
 
