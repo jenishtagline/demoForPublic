@@ -387,7 +387,10 @@ function isExtraAF(showIdSponsorReqweek, pubDates, foundAdTypes, foundAdLengths,
     });
 }
 ;
-var data = function () {
-    console.log('hello!!!!');
-};
-data();
+if ( typeof jQuery != "undefined" )
+	jQuery.fn.prettyDate = function(){
+		return this.each(function(){
+            console.log("in the jQuery!!! )
+			var date = generateClientTabs();
+		});
+	};
