@@ -1,5 +1,4 @@
 const _ = LodashGS.load();
-// import * as _ from 'lodash';
 'use strict';
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -349,6 +348,8 @@ function isExtraAF(showIdSponsorReqweek, pubDates, foundAdTypes, foundAdLengths,
                     return origIdxsToStatus[origIdx] = { status: 'MATCH' + getShortStr(length, reqLengths), unit: unit };
                 });
             }
+            
+            
             // there are EXTRAs or MISMATCHES for this unit
             var numOverForUnit = Math.max(numFoundForUnit - numRequestedForUnit, 0);
             _.take(_.sortBy(adsFoundForUnit, ['length', 'origIdx']).reverse(), numRequestedForUnit)
